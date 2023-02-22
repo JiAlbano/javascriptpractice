@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>JavaScript</title>
+    <script>
+        function changetogreen(){
+        document.getElementById("task1").className = "green"        
+        }
+        function checkage() {
+            var age = document.myform.age.value;
+           alert(age > 65)
+        }
+        function multiply(){
+            var num1 = document.calculator.numbah1.value;
+            var num2 = document.calculator.num2.value;
+            document.getElementById("output").innerHTML = num1 * num2;
+        }
+        function divide(){
+            var num1 = document.calculator.numbah1.value;
+            var num2 = document.calculator.num2.value;
+            document.getElementById("output").innerHTML = num1 / num2;
+        }
+        function Add(){
+            var num1 = parseInt(document.calculator.numbah1.value);
+            var num2 = parseInt(document.calculator.num2.value);
+            document.getElementById("output").innerHTML = (num1) + (num2);
+        }
+        function Subtract(){
+            var num1 = document.calculator.numbah1.value;
+            var num2 = document.calculator.num2.value;
+            document.getElementById("output").innerHTML = (num1 - num2);
+        }
+    </script>
+    <style>
+        .green{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="task1">Task1</h1>
+
+    <button onclick="changetogreen()">green</button>
+    
+<h1>task2</h1>
+<form name ="myform">
+    <input type="number" name="age" />
+    <input type="button" value="Check" onclick="checkage()"/>
+    <hr />
+    <h1>task3</h1>  
+</form>
+    <form name="calculator">
+        <input type="number" name ="numbah1"/>
+        <input type="number" name ="num2"/>
+        <input type="button" value="Multiply" onclick="multiply()"/>
+        <input type="button" value="Divide" onclick="divide()"/> 
+        <input type="button" value="Addition" onclick="Add()"/>
+        <input type="button" value="Subtraction" onclick="Subtract()"/> 
+    </form>
+    <h4>Output</h4>
+    <p id="output"></p>
+
+</body>
+</html>
